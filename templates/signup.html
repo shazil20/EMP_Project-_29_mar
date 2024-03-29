@@ -1,0 +1,224 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register | ITitans</title>
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #c7c5f4, #776bcc);
+}
+h3{
+	font-size: 40px;
+	margin-top: 50px;
+	padding: 30px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {
+	position: relative;
+	height: 600px;
+	width: 660px;
+	box-shadow: 0px 0px 24px #5c5696;
+	background-color: white;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;
+	height: 100%;
+}
+
+.screen__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);
+}
+
+
+
+.login {
+	width: 320px;
+	padding: 30px;
+	
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875b5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #d1d1d4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: 0.2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6a679e;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #d4d3e8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4c489d;
+	box-shadow: 0px 2px 2px #5c5696;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6a679e;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875b5;
+}
+
+.social-login {
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0px 0px 8px #7875b5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);
+}
+.main{
+	display: flex;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="screen">
+			<div class="screen__content">
+				<h3>Register</h3>
+				<div class="main">
+				<div class="left">
+				<form class="login" method="post">
+					{% csrf_token %}
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" class="login__input" placeholder="First Name" name="fname" required>
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" class="login__input" placeholder="Last name" name="lname" required>
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" class="login__input" placeholder="User name" name="username" required>
+					</div>
+                    <div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" class="login__input" placeholder="E-mail" name="email" required>
+					</div>
+				</div>
+				<div class="right">
+					<div class="login__field">
+						<i class="login__icon fas fa-lock"></i>
+						<input type="password" class="login__input" placeholder="Password" name="password1" required>
+					</div>
+                    <div class="login__field">
+						<i class="login__icon fas fa-lock"></i>
+						<input type="text" class="login__input" placeholder="Confirm Password" name="password2" required>
+					</div>
+
+					<button class="button login__submit">
+						<span class="button__text">Register</span>
+						<i class="button__icon fas fa-chevron-right"></i>
+					</button>
+				</div>
+				</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
